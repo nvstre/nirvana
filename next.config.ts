@@ -1,9 +1,9 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  // Standard webpack config for non-Turbopack builds
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      // Prevent Node.js modules from being bundled for the browser
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
@@ -17,13 +17,8 @@ const nextConfig: NextConfig = {
     }
     return config
   },
-  // Disable linting during builds if needed
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  typescript: {
-    // Only if you want to skip type checking during builds
-    // ignoreBuildErrors: true,
   },
 }
 
