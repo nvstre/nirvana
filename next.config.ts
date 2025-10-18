@@ -1,13 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // If you're using Turbopack in dev
-  experimental: {
-    turbo: {
-      resolveAlias: {
-        // Optional: Add any path aliases if needed
-      },
-    },
-  },
+  // Remove any experimental turbopack configs that might cause issues
 }
 
 module.exports = nextConfig
