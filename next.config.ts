@@ -1,9 +1,9 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  // Standard webpack config for non-Turbopack builds
   webpack: (config, { isServer }) => {
     if (!isServer) {
+      // Prevent Node built-ins from breaking client bundles
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
@@ -16,9 +16,6 @@ const nextConfig: NextConfig = {
       }
     }
     return config
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
 }
 

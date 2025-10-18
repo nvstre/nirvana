@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { useEffect } from "react"
 import { motion, stagger, useAnimate } from "motion/react"
@@ -79,8 +79,8 @@ export default function Preview() {
         <p className="text-5xl md:text-7xl z-50 text-white font-calendas italic">
           nirvana.
         </p>
-        <p className="text-xs z-50 hover:scale-110 transition-transform bg-white text-black rounded-full py-2 w-25 cursor-pointer">
-          Coming soon
+        <p className="text-s z-50 text-white rounded-full py-2 w-15 cursor-pointer">
+         Coming soon
         </p>
       </motion.div>
 
