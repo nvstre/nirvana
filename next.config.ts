@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // If you're using Turbopack in dev
+  experimental: {
+    turbo: {
+      resolveAlias: {
+        // Optional: Add any path aliases if needed
+      },
+    },
+  },
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+module.exports = nextConfig
